@@ -19,8 +19,8 @@ search_list = txt.read()
 m = 1
 src_url_search = "https://api.unsplash.com/search/photos?client_id=a32c4f4092abfcd0e5b36d9cd72f0e201a1a1184742ffcc4907e81d67cf7da9b&per_page=20"
 query = "plaid%20shirt"
-if not os.path.isdir("F:\\329运动模糊\\unsplash_shirt\\" + query):
-    os.makedirs("F:\\329运动模糊\\unsplash_shirt\\" + query)
+if not os.path.isdir("F:\\329\\unsplash_shirt\\" + query):
+    os.makedirs("F:\\329\\unsplash_shirt\\" + query)
 
 search_list = str(search_list)
 
@@ -35,7 +35,7 @@ while temp_start != -1:
     # image_url = urllib.request.quote(image_url, ':/=&?')
     response = urllib.request.urlopen(image_url)
     re = response.read()
-    with open("F:\\329运动模糊\\unsplash_shirt\\" + query + "\\"
+    with open("F:\\329\\unsplash_shirt\\" + query + "\\"
               + str(m) + ".jpg", 'wb') as f:
         f.write(re)
     m = m + 1
